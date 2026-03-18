@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About — Arnold Segine</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .about-hero {
+    padding: 120px 56px 60px;
+    background: linear-gradient(180deg, rgba(201,162,39,0.04) 0%, transparent 100%);
+  }
+  .about-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
+  .about-left h1 {
+    font-family: var(--serif); font-size: clamp(3rem,5vw,5rem);
+    font-weight: 400; line-height: 1.0; margin-bottom: 20px;
+  }
+  .about-left h1 em { color: var(--gold); }
+  .about-left p { font-size: 1rem; color: var(--muted); line-height: 1.8; margin-bottom: 16px; }
+
+  /* Timeline */
+  .timeline { display: flex; flex-direction: column; gap: 0; }
+  .tl-item { display: flex; gap: 20px; padding-bottom: 36px; position: relative; }
+  .tl-item:not(:last-child)::after {
+    content: ''; position: absolute; left: 9px; top: 24px; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+  .tl-dot {
+    width: 20px; height: 20px; min-width: 20px;
+    border: 2px solid var(--gold); border-radius: 50%;
+    background: var(--bg); margin-top: 3px;
+  }
+  .tl-content h4 { font-size: 0.95rem; color: var(--white); font-weight: 500; margin-bottom: 3px; }
+  .tl-sub { font-size: 0.78rem; color: var(--gold); margin-bottom: 6px; font-weight: 500; }
+  .tl-content p { font-size: 0.84rem; color: var(--muted); line-height: 1.7; }
+
+  /* Expertise grid */
+  .exp-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+  .exp-card { background: var(--bg2); padding: 28px 22px; transition: background 0.2s; }
+  .exp-card:hover { background: var(--bg3); }
+  .exp-icon { font-size: 1.2rem; color: var(--gold); margin-bottom: 10px; }
+  .exp-card h3 { font-family: var(--serif); font-size: 1.1rem; color: var(--white); margin-bottom: 8px; font-weight: 600; }
+  .exp-card p { font-size: 0.82rem; color: var(--muted); margin-bottom: 12px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 5px; }
+
+  /* LinkedIn about */
+  .linkedin-box {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 12px; padding: 48px;
+    max-width: 780px;
+  }
+  .linkedin-box p { font-size: 1rem; color: rgba(242,238,232,0.85); line-height: 1.9; margin-bottom: 20px; }
+  .spec-box {
+    background: var(--bg3); border-left: 3px solid var(--gold);
+    border-radius: 0 8px 8px 0; padding: 24px 28px; margin: 24px 0;
+  }
+  .spec-box p { font-size: 0.9rem; color: var(--white); line-height: 2; margin: 0; }
+  .quote-line { font-size: 1.05rem; color: var(--gold); font-style: italic; }
+
+  /* Education */
+  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .edu-card {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 10px; padding: 24px 26px;
+  }
+  .edu-card h4 { font-size: 0.92rem; color: var(--white); font-weight: 500; margin-bottom: 4px; }
+  .edu-card .sub { font-size: 0.8rem; color: var(--muted); margin-bottom: 6px; }
+  .edu-card .note { font-size: 0.75rem; color: var(--muted); font-style: italic; }
+
+  @media (max-width: 900px) {
+    .about-hero { padding: 100px 20px 40px; }
+    .about-grid { grid-template-columns: 1fr; gap: 40px; }
+    .exp-grid { grid-template-columns: 1fr; }
+    .edu-grid { grid-template-columns: 1fr; }
+    .linkedin-box { padding: 28px 20px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Arnold Segine</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="travelbuddy.html">TravelBuddy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <section class="about-hero">
+    <div class="about-grid">
+      <div class="about-left fade-up">
+        <h1>Career<br/><em>Story</em></h1>
+        <p>From HR operations to COO — a track record of growing into bigger product and leadership challenges at every step.</p>
+        <p>Now I'm bringing 7+ years of that experience fully into AI product leadership.</p>
+        <a href="contact.html" class="btn btn-gold" style="margin-top:16px;">Let's Connect</a>
+      </div>
+      <div class="timeline fade-up-2">
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>Chief Operating Officer</h4>
+            <div class="tl-sub">Canadian Fertility Consulting Ltd. · Woodbridge, ON · Jul 2023 – Present</div>
+            <p>Owned product roadmap and service delivery strategy. Identified and shipped AI-driven automation features reducing costs by 15%. Conducted user research and stakeholder feedback loops to inform new product feature development. Managed cross-functional teams and oversaw budgeting across product lines.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>Project Manager</h4>
+            <div class="tl-sub">Charter Communications · Charlotte, NC · Mar 2021 – Jul 2023</div>
+            <p>Led enterprise migration from monolithic architecture to microservices on AWS. Defined phased delivery roadmap, go-live criteria, and managed cross-functional teams across time zones using Jira and Confluence.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>Agile Scrum Master</h4>
+            <div class="tl-sub">Charter Communications · Charlotte, NC · Sep 2020 – Mar 2022</div>
+            <p>Facilitated all Agile ceremonies in a SAFe Scaled environment. Developed agile metrics to surface delivery bottlenecks. Coached teams on Agile methodologies and partnered with Product Owners on backlog grooming.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>Project Manager</h4>
+            <div class="tl-sub">Combined Insurance · Thornhill, ON · Aug 2019 – Aug 2020</div>
+            <p>Managed insurance product development and CX improvement projects. Ensured regulatory compliance, on-time delivery, and stakeholder alignment throughout lifecycle.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>HR &amp; Office Manager</h4>
+            <div class="tl-sub">Kale Recruitment · Bucharest, Romania · Mar 2017 – May 2019</div>
+            <p>Led full-cycle HR operations including recruitment, onboarding, performance management, and employee relations.</p>
+          </div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-dot"></div>
+          <div class="tl-content">
+            <h4>AI Product Management Certification</h4>
+            <div class="tl-sub">2025</div>
+            <p>Completed AI Product Management course covering LLM product strategy, AI roadmapping, NLP use cases, and building AI-powered product experiences.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section class="reveal">
+    <div class="section-label">Core Expertise</div>
+    <h2>Three Domains, <em>One Vision</em></h2>
+    <p class="section-desc">At the intersection of AI strategy, cloud infrastructure, and product leadership.</p>
+    <div class="exp-grid">
+      <div class="exp-card">
+        <div class="exp-icon">◈</div>
+        <h3>AI Strategy</h3>
+        <p>Designing AI-powered products that solve real user problems — from NLP interfaces to predictive decision engines.</p>
+        <div class="tags"><span class="tag">MLOps</span><span class="tag">Predictive Analytics</span><span class="tag">NLP</span><span class="tag">AI Roadmapping</span><span class="tag">LLM Products</span></div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon">☁</div>
+        <h3>Cloud Systems</h3>
+        <p>Leading complex cloud infrastructure with a product mindset — scalable, reliable, and business-aligned.</p>
+        <div class="tags"><span class="tag">AWS Migration</span><span class="tag">Microservices</span><span class="tag">Salesforce</span><span class="tag">Cloud Infrastructure</span></div>
+      </div>
+      <div class="exp-card">
+        <div class="exp-icon">◎</div>
+        <h3>Product Leadership</h3>
+        <p>Aligning engineering, data, and business teams around shared outcomes through Agile delivery and product vision.</p>
+        <div class="tags"><span class="tag">CSM Certified</span><span class="tag">SAFe</span><span class="tag">OKR / KPI</span><span class="tag">Product Strategy</span></div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section class="reveal">
+    <div class="section-label">Education</div>
+    <h2>Academic <em>Background</em></h2>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <h4>Master of Business Administration</h4>
+        <div class="sub">University of Bucharest, Romania</div>
+        <div class="note">Completed 1 year of graduate coursework in Strategic Management</div>
+      </div>
+      <div class="edu-card">
+        <h4>B.Eng, Marine Engineering &amp; Navigation</h4>
+        <div class="sub">Constanta Maritime University, Romania</div>
+      </div>
+      <div class="edu-card">
+        <h4>AI Product Management (2025)</h4>
+        <div class="sub">Certification</div>
+      </div>
+      <div class="edu-card">
+        <h4>Certified Scrum Master (CSM)</h4>
+        <div class="sub">Project Management &amp; Business Analyst — SkillHat · Cisco IT Essentials</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider"/>
+
+  <section class="reveal">
+    <div class="section-label">In My Own Words</div>
+    <h2>LinkedIn <em>About</em></h2>
+    <div class="linkedin-box">
+      <p>The world is moving fast. AI is not coming — it is already here. And the organizations that will win are the ones with product leaders who understand both the technology and the humans it is built for.</p>
+      <p>That is where I come in.</p>
+      <p>I am a Senior AI Product Manager and Operations Leader with 7+ years of experience building systems that work. From leading enterprise cloud migrations to running operations as COO at a healthcare company where I shipped AI-driven automation that cut costs by 15%, I have sat at the intersection of strategy, technology, and people my entire career.</p>
+      <div class="spec-box">
+        <p>🔹 AI-enabled analytics platforms and decision intelligence systems<br/>🔹 Cloud infrastructure and platform modernization (AWS, microservices)<br/>🔹 Agile product delivery in SAFe environments (Certified Scrum Master)<br/>🔹 Translating complex AI capabilities into real business outcomes</p>
+      </div>
+      <p>Most recently I designed TravelBuddy AI, an identity-aware travel discovery platform powered by LLM natural language search, from user research through prototype.</p>
+      <p class="quote-line">I am not just following the AI trend. I am building inside it.</p>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 Arnold Segine</div>
+    <div><a href="contact.html">Get in Touch</a> &nbsp;·&nbsp; Edmonton, AB · Remote</div>
+  </footer>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

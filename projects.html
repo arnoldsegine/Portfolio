@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Projects — Arnold Segine</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .projects-hero { padding: 120px 56px 60px; }
+  .projects-hero h1 { font-family: var(--serif); font-size: clamp(3rem,5vw,5rem); font-weight: 400; margin-bottom: 16px; }
+  .projects-hero h1 em { color: var(--gold); }
+
+  .proj-list { display: flex; flex-direction: column; gap: 24px; margin-top: 48px; }
+
+  .proj-row {
+    display: grid; grid-template-columns: 280px 1fr;
+    border: 1px solid var(--border); border-radius: 12px;
+    overflow: hidden; text-decoration: none;
+    transition: border-color 0.2s, transform 0.25s;
+    background: var(--bg2);
+  }
+  .proj-row:hover { border-color: var(--gold-dim); transform: translateY(-3px); }
+
+  .proj-row-visual {
+    display: flex; align-items: center; justify-content: center;
+    min-height: 180px; padding: 20px;
+  }
+  .pv-aws { background: linear-gradient(135deg, #060D1F, #0F2040); }
+  .pv-sf  { background: linear-gradient(135deg, #0D1B2A, #0E2A44); }
+  .pv-tab { background: linear-gradient(135deg, #1A0D2A, #2E1050); }
+  .pv-hr  { background: linear-gradient(135deg, #0A180A, #143014); }
+  .pv-rt  { background: linear-gradient(135deg, #1A0A0A, #3A1010); }
+  .pv-tb  { background: linear-gradient(135deg, #060D20, #0A1A3A); }
+
+  .proj-visual-icon { font-size: 2.5rem; opacity: 0.9; }
+
+  .proj-row-body { padding: 28px 32px; display: flex; flex-direction: column; justify-content: center; }
+  .proj-row-body .proj-tags { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 10px; }
+  .proj-row-body h3 { font-family: var(--serif); font-size: 1.4rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
+  .proj-row-body p { font-size: 0.86rem; color: var(--muted); line-height: 1.7; margin-bottom: 16px; }
+  .proj-row-metrics { display: flex; gap: 24px; flex-wrap: wrap; border-top: 1px solid var(--border); padding-top: 14px; }
+  .proj-row-metric strong { display: block; font-family: var(--serif); font-size: 1.1rem; color: var(--gold); line-height: 1; }
+  .proj-row-metric span { font-size: 0.7rem; color: var(--muted); }
+  .proj-row-arrow { font-size: 0.78rem; color: var(--gold); margin-top: 12px; font-weight: 500; display: inline-flex; align-items: center; gap: 6px; transition: gap 0.2s; }
+  .proj-row:hover .proj-row-arrow { gap: 10px; }
+
+  @media (max-width: 900px) {
+    .projects-hero { padding: 100px 20px 40px; }
+    .proj-row { grid-template-columns: 1fr; }
+    .proj-row-visual { min-height: 120px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Arnold Segine</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="travelbuddy.html">TravelBuddy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <section class="projects-hero">
+    <div class="section-label fade-up">Case Studies</div>
+    <h1 class="fade-up-2">Selected <em>Projects</em></h1>
+    <p class="section-desc fade-up-3">Real problems. Measurable outcomes. Product thinking at every layer.</p>
+
+    <div class="proj-list">
+      <a href="project-aws.html" class="proj-row reveal">
+        <div class="proj-row-visual pv-aws"><div class="proj-visual-icon">☁️</div></div>
+        <div class="proj-row-body">
+          <div class="proj-tags"><span class="tag tag-gold">Cloud Infrastructure</span><span class="tag tag-gold">AI Platform</span></div>
+          <h3>AWS Cloud-Native AI Infrastructure</h3>
+          <p>Led enterprise migration from monolithic architecture to microservices on AWS, enabling real-time AI model deployment at scale.</p>
+          <div class="proj-row-metrics">
+            <div class="proj-row-metric"><strong>3×</strong><span>Scalability</span></div>
+            <div class="proj-row-metric"><strong>4</strong><span>Delivery Phases</span></div>
+            <div class="proj-row-metric"><strong>On-time</strong><span>Go-Live</span></div>
+          </div>
+          <div class="proj-row-arrow">View Case Study →</div>
+        </div>
+      </a>
+
+      <a href="project-salesforce.html" class="proj-row reveal">
+        <div class="proj-row-visual pv-sf"><div class="proj-visual-icon">📊</div></div>
+        <div class="proj-row-body">
+          <div class="proj-tags"><span class="tag tag-gold">Analytics</span><span class="tag tag-gold">Salesforce</span></div>
+          <h3>Salesforce KPI &amp; Dashboard Optimization</h3>
+          <p>Eliminated legacy data debt, implemented enterprise data governance, and standardized KPI reporting across all business units.</p>
+          <div class="proj-row-metrics">
+            <div class="proj-row-metric"><strong>15%</strong><span>Storage Savings</span></div>
+            <div class="proj-row-metric"><strong>8%</strong><span>Error Reduction</span></div>
+          </div>
+          <div class="proj-row-arrow">View Case Study →</div>
+        </div>
+      </a>
+
+      <a href="project-tableau.html" class="proj-row reveal">
+        <div class="proj-row-visual pv-tab"><div class="proj-visual-icon">🔮</div></div>
+        <div class="proj-row-body">
+          <div class="proj-tags"><span class="tag tag-gold">AI Analytics</span><span class="tag tag-gold">Tableau</span></div>
+          <h3>Tableau AI Lead Intelligence Platform</h3>
+          <p>Designed predictive analytics platform surfacing AI-powered lead intelligence, enabling sales teams to prioritize outreach on real-time behavioral signals.</p>
+          <div class="proj-row-metrics">
+            <div class="proj-row-metric"><strong>Real-time</strong><span>Lead Scoring</span></div>
+            <div class="proj-row-metric"><strong>AI-driven</strong><span>Predictions</span></div>
+          </div>
+          <div class="proj-row-arrow">View Case Study →</div>
+        </div>
+      </a>
+
+      <a href="project-hr.html" class="proj-row reveal">
+        <div class="proj-row-visual pv-hr"><div class="proj-visual-icon">👥</div></div>
+        <div class="proj-row-body">
+          <div class="proj-tags"><span class="tag tag-gold">HR Tech</span><span class="tag tag-gold">Automation</span></div>
+          <h3>AI-Driven HR Lifecycle Intelligence</h3>
+          <p>Designed predictive analytics platform for employee retention and performance, automating workforce insights across the full HR lifecycle.</p>
+          <div class="proj-row-metrics">
+            <div class="proj-row-metric"><strong>120+</strong><span>Hours Saved/mo</span></div>
+            <div class="proj-row-metric"><strong>Full-cycle</strong><span>Automation</span></div>
+          </div>
+          <div class="proj-row-arrow">View Case Study →</div>
+        </div>
+      </a>
+
+      <a href="project-realtime.html" class="proj-row reveal">
+        <div class="proj-row-visual pv-rt"><div class="proj-visual-icon">⚡</div></div>
+        <div class="proj-row-body">
+          <div class="proj-tags"><span class="tag tag-gold">Real-time Analytics</span><span class="tag tag-gold">Operations</span></div>
+          <h3>Real-Time Operational Analytics Platform</h3>
+          <p>Built live operational analytics system enabling teams to monitor KPIs, detect anomalies, and make data-driven decisions without lag across a unified reporting layer.</p>
+          <div class="proj-row-metrics">
+            <div class="proj-row-metric"><strong>Live</strong><span>KPI Monitoring</span></div>
+            <div class="proj-row-metric"><strong>Unified</strong><span>Data Layer</span></div>
+          </div>
+          <div class="proj-row-arrow">View Case Study →</div>
+        </div>
+      </a>
+
+      <a href="travelbuddy.html" class="proj-row reveal">
+        <div class="proj-row-visual pv-tb"><div class="proj-visual-icon">✈️</div></div>
+        <div class="proj-row-body">
+          <div class="proj-tags"><span class="tag tag-gold">Personal Project</span><span class="tag tag-gold">LLM / NLP</span><span class="tag tag-gold">Identity-Aware AI</span></div>
+          <h3>TravelBuddy AI — Featured Case Study</h3>
+          <p>Independently conceived, researched, and prototyped an LLM-powered identity-aware travel discovery platform helping travelers find culturally relevant services worldwide.</p>
+          <div class="proj-row-metrics">
+            <div class="proj-row-metric"><strong>Original</strong><span>User Research</span></div>
+            <div class="proj-row-metric"><strong>MVP</strong><span>Prototype Built</span></div>
+          </div>
+          <div class="proj-row-arrow">View Full Case Study →</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div>© 2026 Arnold Segine</div>
+    <div><a href="contact.html">Get in Touch</a> &nbsp;·&nbsp; Edmonton, AB · Remote</div>
+  </footer>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>

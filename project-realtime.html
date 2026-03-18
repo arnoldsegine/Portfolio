@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Real-Time Operational Analytics Platform — Arnold Segine</title>
+<link rel="stylesheet" href="style.css"/>
+<style>
+  .proj-hero {
+    padding: 120px 56px 60px;
+    background: linear-gradient(135deg, #1A0A0A, #3A1010, #150808);
+    position: relative; overflow: hidden;
+  }
+  .proj-hero::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(to bottom, transparent 60%, var(--bg) 100%);
+  }
+  .proj-hero-content { position: relative; z-index: 1; max-width: 700px; }
+  .back-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.78rem; color: var(--muted); text-decoration: none;
+    margin-bottom: 32px; transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--gold); }
+  .proj-hero h1 {
+    font-family: var(--serif); font-size: clamp(2.2rem,4vw,3.6rem);
+    font-weight: 400; line-height: 1.05; margin-bottom: 20px; color: var(--white);
+  }
+  .proj-hero h1 em { color: var(--gold); }
+  .proj-hero-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+
+  .case-body { padding: 60px 56px; }
+  .case-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .case-block h3 {
+    font-family: var(--serif); font-size: 1.3rem; font-weight: 600;
+    color: var(--white); margin-bottom: 12px;
+  }
+  .case-block p { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+  .case-label {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold);
+    border-bottom: 1px solid var(--border); padding-bottom: 8px; margin-bottom: 14px;
+  }
+
+  .impact-strip {
+    display: grid; grid-template-columns: repeat(4,1fr);
+    gap: 2px; background: var(--border);
+    border-radius: 10px; overflow: hidden;
+    margin: 48px 0;
+  }
+  .impact-card {
+    background: var(--bg2); padding: 28px 20px; text-align: center;
+  }
+  .impact-card strong {
+    display: block; font-family: var(--serif);
+    font-size: 2rem; color: var(--gold); line-height: 1; margin-bottom: 6px;
+  }
+  .impact-card span { font-size: 0.75rem; color: var(--muted); }
+
+  .tools-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+  .tool-tag {
+    background: var(--bg3); border: 1px solid var(--border);
+    padding: 5px 14px; border-radius: 5px;
+    font-size: 0.78rem; color: var(--white);
+  }
+
+  .ai-roadmap {
+    background: linear-gradient(135deg, rgba(201,162,39,0.07), rgba(201,162,39,0.02));
+    border: 1px solid rgba(201,162,39,0.2);
+    border-radius: 10px; padding: 32px;
+    margin-top: 48px;
+  }
+  .ai-roadmap h3 { font-family: var(--serif); font-size: 1.3rem; color: var(--white); margin-bottom: 12px; font-weight: 600; }
+  .ai-roadmap p { font-size: 0.9rem; color: var(--muted); line-height: 1.8; }
+
+  .nav-proj {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 32px 56px; border-top: 1px solid var(--border);
+  }
+  .nav-proj a {
+    display: flex; align-items: center; gap: 8px;
+    text-decoration: none; color: var(--muted);
+    font-size: 0.82rem; transition: color 0.2s;
+  }
+  .nav-proj a:hover { color: var(--gold); }
+
+  @media (max-width: 900px) {
+    .proj-hero { padding: 100px 20px 40px; }
+    .case-body { padding: 40px 20px; }
+    .case-grid { grid-template-columns: 1fr; gap: 32px; }
+    .impact-strip { grid-template-columns: repeat(2,1fr); }
+    .nav-proj { padding: 24px 20px; flex-direction: column; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Arnold Segine</a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="travelbuddy.html">TravelBuddy</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page-wrap">
+  <div class="proj-hero">
+    <div class="proj-hero-content fade-up">
+      <a href="projects.html" class="back-link">← Back to Projects</a>
+      <div class="section-label">Case Study</div>
+      <h1>Real-Time Operational<br/><em>Analytics Platform</em></h1>
+      <div class="proj-hero-tags"><span class="tag tag-gold">Real-time Analytics</span><span class="tag tag-gold">Operations</span><span class="tag tag-gold">KPI Monitoring</span></div>
+    </div>
+  </div>
+
+  <div class="case-body">
+    <div class="impact-strip reveal">
+      <div class="impact-card"><strong>Live</strong><span>KPI Monitoring</span></div><div class="impact-card"><strong>Unified</strong><span>Data Layer</span></div><div class="impact-card"><strong>Real-time</strong><span>Anomaly Detection</span></div><div class="impact-card"><strong>Faster</strong><span>Decision Making</span></div>
+    </div>
+
+    <div class="case-grid reveal">
+      <div class="case-block">
+        <div class="case-label">The Problem</div>
+        <h3>What needed solving</h3>
+        <p>Operations teams were working with stale data — reports were generated overnight and reviewed the following morning, meaning anomalies and issues went undetected for hours. There was no unified view across operational systems.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-label">Users</div>
+        <h3>Who it was built for</h3>
+        <p>Operations managers, team leads, and executives who needed live visibility into operational KPIs to make fast, data-driven decisions and detect issues before they escalated.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-label">The Solution</div>
+        <h3>How we solved it</h3>
+        <p>Built a live operational analytics system that unified multiple data sources into a single real-time dashboard. Teams could monitor KPIs as they changed, set anomaly alerts, and drill into root causes without waiting for scheduled reports.</p>
+      </div>
+      <div class="case-block">
+        <div class="case-label">My Role</div>
+        <h3>What I owned</h3>
+        <p>Product Manager responsible for defining the real-time data architecture requirements, stakeholder alignment across operations and engineering teams, and driving delivery of the MVP and subsequent iterations.</p>
+        <div class="case-label" style="margin-top:20px;">Tools &amp; Technologies</div>
+        <div class="tools-row"><span class="tool-tag">Real-time Data Pipelines</span><span class="tool-tag">Analytics Dashboards</span><span class="tool-tag">API Integration</span><span class="tool-tag">Alert Systems</span></div>
+      </div>
+    </div>
+
+    <div class="ai-roadmap reveal">
+      <div class="case-label">Future AI Roadmap</div>
+      <h3>Where this goes next</h3>
+      <p>Planned AI layer includes predictive anomaly detection using ML models trained on historical operational patterns, enabling proactive alerting before issues impact customers.</p>
+    </div>
+  </div>
+
+  <div class="nav-proj">
+    <a href="projects.html">← All Projects</a>
+    <a href="contact.html">Discuss this project →</a>
+  </div>
+
+  <footer>
+    <div>© 2026 Arnold Segine</div>
+    <div><a href="contact.html">Get in Touch</a> &nbsp;·&nbsp; Edmonton, AB · Remote</div>
+  </footer>
+</div>
+<script src="nav.js"></script>
+</body>
+</html>
